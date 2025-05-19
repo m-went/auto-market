@@ -1,0 +1,16 @@
+@if (carInfo() !== null){
+<li>
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="offerBar">
+        <div><img aria-label="Product photo" src="/images/audi_photo1.jpg" class="productImage" /></div>
+        <div>
+            <h2>{{carInfo()?.title}}</h2>
+            <p><span>{{carInfo()?.engineDisplacement}} {{carInfo()?.horsePower}} {{carInfo()?.fuelType}}</span></p>
+            <p><span>{{carInfo()?.manufacturingYear}}</span></p>
+            <p>{{carInfo()?.location?.city}} ({{carInfo()?.location?.voivodeship}})</p>
+        </div>
+        <div>
+            <p>{{carInfo()?.price?.value}} {{carInfo()?.price?.currency}}</p>
+        </div>
+    </div>
+</li>
+}

@@ -1,0 +1,14 @@
+<app-listing-filters />
+
+<p>{{categoryName}}</p>
+<p>Liczba ogłoszeń: {{foundOffersNumber}}</p>
+
+@if(carsData.length>0){
+<ol>
+    @for (car of carsData; track car.offerId) {
+    <app-listing-offer-bar [carInfo]="car" />
+    }
+</ol>
+} @else {
+<p>Niestety, nie posiadamy w naszej bazie aktualnie żadnych ofert</p>
+}
