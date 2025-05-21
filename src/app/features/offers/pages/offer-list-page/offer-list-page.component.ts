@@ -34,8 +34,7 @@ interface CarInfo {
 export class OfferListPageComponent {
   foundOffersNumber = 15;
   categoryName = 'Samochody osobowe';
-  carsData: CarInfo[] = [];
-  /*  carsData = [
+  carsData: CarInfo[] = [
     {
       offerId: 1,
       title: 'Audi A4',
@@ -76,5 +75,5 @@ export class OfferListPageComponent {
         currency: 'PLN',
       },
     },
-  ]; */
+  ];
 }
