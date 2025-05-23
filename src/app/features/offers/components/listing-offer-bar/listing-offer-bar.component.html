@@ -1,5 +1,5 @@
 @if (carInfo() !== null){
-<li>
+<li (click)="goToOffer(carInfo()!.offerId)">
     <div fxLayout="row" fxLayoutAlign="space-between center" class="offerBar">
         <div><img aria-label="Product photo" src="/images/audi_photo1.jpg" class="productImage" /></div>
         <div>

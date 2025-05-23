@@ -1,5 +1,6 @@
-import { Component, input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-listing-offer-bar',
@@ -9,6 +10,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   styleUrl: './listing-offer-bar.component.scss',
 })
 export class ListingOfferBarComponent {
+  private readonly router = inject(Router);
+
   carInfo = input<{
     offerId: number;
     title: string;
@@ -29,4 +32,7 @@ export class ListingOfferBarComponent {
       currency: string;
     };
   } | null>(null);
+  goToOffer(offerID: number) {
+    this.router.navigate(['/offer', offerID]);
+  }
 }
