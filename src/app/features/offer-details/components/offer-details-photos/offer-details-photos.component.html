@@ -1,4 +1,11 @@
-<p>offer-details-photos works!</p>
-@for (image of images();track image){
-<img aria-label="Product image" src={{image}} />
-}
+<div class="card">
+    <p-galleria [value]="images()" [responsiveOptions]="responsiveOptions" [containerStyle]="{ 'max-width': '640px' }"
+        [showIndicators]="false" [showItemNavigatorsOnHover]="true" [showItemNavigators]="true" [numVisible]="5">
+        <ng-template #item let-item>
+            <img [src]="item.itemImageSrc" style="width:100%" />
+        </ng-template>
+        <ng-template #thumbnail let-item>
+            <img [src]="item.thumbnailImageSrc" class="thumbnail" />
+        </ng-template>
+    </p-galleria>
+</div>

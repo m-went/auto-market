@@ -23,12 +23,15 @@ export class OfferDetailsPageComponent {
   offerDetails = {
     offerId: 1,
     title: 'Audi A4',
-    horsePower: 180, // KM
-    engineDisplacement: 1968, // cm3
-    mileage: 190000, //km
-    fuelType: 'diesel',
-    transmission: 'automatic',
-    manufacturingYear: 2013,
+    mainInfo: {
+      horsePower: 180, // KM
+      engineDisplacement: 1968, // cm3
+      mileage: 190000, //km
+      fuelType: 'diesel',
+      transmission: 'automatic',
+      manufacturingYear: 2013,
+      bodyType: 'sedan',
+    },
     location: {
       city: 'Rumia',
       postCode: '84-230',
@@ -39,7 +42,56 @@ export class OfferDetailsPageComponent {
       value: 55000,
       currency: 'PLN',
     },
-    images: ['/images/audi_photo1.jpg'],
+    images: [
+      {
+        itemImageSrc: '/images/audi_photo1.jpg',
+        thumbnailImageSrc: '/images/audi_photo1.jpg',
+        alt: 'Description for Image 2',
+        title: 'Title 2',
+      },
+      {
+        itemImageSrc: '/images/audi_photo1.jpg',
+        thumbnailImageSrc: '/images/audi_photo1.jpg',
+        alt: 'Description for Image 2',
+        title: 'Title 2',
+      },
+      {
+        itemImageSrc: '/images/audi_photo1.jpg',
+        thumbnailImageSrc: '/images/audi_photo1.jpg',
+        alt: 'Description for Image 2',
+        title: 'Title 2',
+      },
+      {
+        itemImageSrc: '/images/audi_photo1.jpg',
+        thumbnailImageSrc: '/images/audi_photo1.jpg',
+        alt: 'Description for Image 2',
+        title: 'Title 2',
+      },
+      {
+        itemImageSrc: '/images/audi_photo1.jpg',
+        thumbnailImageSrc: '/images/audi_photo1.jpg',
+        alt: 'Description for Image 2',
+        title: 'Title 2',
+      },
+      {
+        itemImageSrc: '/images/audi_photo1.jpg',
+        thumbnailImageSrc: '/images/audi_photo1.jpg',
+        alt: 'Description for Image 2',
+        title: 'Title 2',
+      },
+      {
+        itemImageSrc: '/images/audi_photo1.jpg',
+        thumbnailImageSrc: '/images/audi_photo1.jpg',
+        alt: 'Description for Image 2',
+        title: 'Title 2',
+      },
+      {
+        itemImageSrc: '/images/audi_photo1.jpg',
+        thumbnailImageSrc: '/images/audi_photo1.jpg',
+        alt: 'Description for Image 2',
+        title: 'Title 2',
+      },
+    ],
   };
   @Input()
   set id(offerID: string) {
